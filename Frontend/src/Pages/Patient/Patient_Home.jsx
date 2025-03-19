@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import LibraryCard from '../../Component/Patient/LibraryCard'
 import { useNavigate } from 'react-router-dom'
 function Patient_Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const navigate = useNavigate();
   return (
     <>
@@ -16,12 +19,12 @@ function Patient_Home() {
                 Get the right mental health support.<br />Find the therapist who is right for you.
                 </p>
                 <div className='md:animate-bounce'>
-                <a onClick={()=>navigate('/therapist')} className='bg-[#17A39C] p-3 px-5 rounded text-white font-semibold shadow-md shadow-black/50 cursor-pointer'>Find a Therapist</a>
+                <a onClick={()=>navigate('/user/therapist')} className='bg-[#17A39C] p-3 px-5 rounded text-white font-semibold shadow-md shadow-black/50 cursor-pointer'>Find a Therapist</a>
                 </div>
             </div>
         
             <div >
-            <div className='grid grid-cols-2 grid-rows-2 px-5 py-16 gap-3 min-h-[25rem] lg:h-screen w-full '>
+            <div className='grid grid-cols-2 grid-rows-2 px-5 py-5 lg:py-28 gap-3 min-h-[25rem] lg:h-screen w-full '>
                 <div style={{backgroundImage:`url(/src/assets/Patient/pexels-mikhail-nilov-6894013.jpg)`}} className='xl:min-w-[350px] bg-cover rounded-xl bg-center row-span-2'>
                 </div>
                 <div style={{backgroundImage:`url(/src/assets/Patient/pexels-olly-948875.jpg)`}} className='min-w-[100px] bg-cover rounded-xl bg-center'>
@@ -106,7 +109,7 @@ function Patient_Home() {
             <LibraryCard/>
         </div>
         <div className='py-10'>
-            <a>View Library</a>
+            <button onClick={()=>navigate('/Library')}>View Library <i className="bi bi-arrow-right align-middle text-lg"></i></button>
         </div>
     </section>
     

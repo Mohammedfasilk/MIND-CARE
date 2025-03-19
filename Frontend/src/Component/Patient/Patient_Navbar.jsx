@@ -1,42 +1,73 @@
-import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom';
-
-
-
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Patient_Navbar() {
-    const myElementRef = useRef(null);
-    const [toggle , SetToggle] = useState(false)
+  const location = useLocation();
+  const [toggle, setToggle] = useState(false);
 
-    const MenuToggle = ()=>{
-          const Menu=myElementRef.current
-          toggle?  Menu.classList.add('hidden') : Menu.classList.remove('hidden')
-          SetToggle(!toggle)
-    }
+  const MenuToggle = () => {
+    setToggle((prev) => !prev);
+  };
+
+  const handleClick = () => setToggle(false);
+
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className='flex justify-between xl:items-center xl:space-x-20 w-full xl:px-16 py-4 border-b fixed bg-white z-10'>
-        <div className='flex px-5 items-center'>
-            <h1 className='text-3xl font-extrabold text-blue-950' >
-                MindCare
-            </h1>
+    <nav className="flex justify-between xl:items-center xl:space-x-20 w-full xl:px-16 py-4 border-b fixed bg-white z-10">
+      <div className="flex px-5 items-center">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-blue-950">
+          MindCare
+        </h1>
+      </div>
+
+      
+      <div
+        className={`xl:flex absolute xl:static xl:max-h-full transition-all duration-300 ease-in-out mt-10 xl:mt-0 right-0 items-center rounded-b-xl bg-white/95 py-2 xl:py-2 xl:border-b-0 border-neutral-200 ${
+          toggle ? "max-h-screen opacity-100" : "max-h-0 opacity-0 xl:opacity-100"
+        }`}
+      >
+        <ul className="xl:flex xl:items-center xl:space-x-16 space-y-2 xl:space-y-0 text-left px-5 py-5 xl:py-0 md:px-10 text-slate-600 font-bold">
+          {[
+            { name: "Home", path: "/user/Dashboard" },
+            { name: "Find a Therapist", path: "/user/therapist" },
+            { name: "Appointments", path: "/user/Appointment" },
+            { name: "Library", path: "/user/Library" },
+            { name: "Complaint & Feedback", path: "/user/Feedback" },
+          ].map(({ name, path }) => (
+            <li key={path}>
+              <Link
+                onClick={handleClick}
+                to={path}
+                className={`pb-1 ${
+                  isActive(path) && "border-b-2 border-gray-300 text-black"
+                }`}
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      
+      <div className="flex items-center">
+        <Link to="/user/Profile">
+          <i className="bi bi-person-circle text-2xl"></i>
+        </Link>
+        <div className="xl:hidden px-5">
+          <button
+            onClick={MenuToggle}
+            className="bg-[#17A39C] text-white rounded py-2 px-4"
+            aria-expanded={toggle}
+            aria-label="Toggle navigation"
+          >
+            <i className={`bi ${toggle ? "bi-x-lg" : "bi-list"}`}></i>
+          </button>
         </div>
-        <div className='xl:hidden px-5'>
-        <button onClick={MenuToggle} className='bg-[#17A39C] text-white font-bold rounded p-2'>Menu</button>
-        </div>
-        <div ref={myElementRef}  className='toggle hidden xl:flex absolute xl:static mt-10 xl:mt-0  justify-center right-0  items-center rounded-b-xl bg-white/95 py-2 xl:py-2 border-b xl:border-b-0 border-neutral-200'>
-            <ul className='xl:flex xl:space-x-20 space-y-2 xl:space-y-0 text-left px-5 py-5 xl:py-0 md:px-10 xl:h-fit h-screen text-slate-600 font-bold'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/therapist'>Find a Therapist</Link></li>
-                <li><Link to="/Appointment">Appointments</Link></li>
-                <li><a href="">Library</a></li>
-                <li><a href="">Complaint & Feedback</a></li>
-                <li className='p-3 xl:p-0'><a href="" className='bg-[#17A39C] p-2 px-5 rounded text-white font-semibold'>About Us</a></li>
-            </ul>
-        </div>
-            
+      </div>
     </nav>
-  )
+  );
 }
 
-export default Patient_Navbar
+export default Patient_Navbar;

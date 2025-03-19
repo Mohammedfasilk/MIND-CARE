@@ -1,32 +1,37 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function PatientFooter() {
   return (
-    <footer className='bg-[#F8F5F5] px-10'>
+    <footer className='bg-[#F8F5F5] px-10 shadow-inner shadow-neutral-150'>
         <div className='border-b border-stone-300 p-10'>
             <div className='flex flex-col items-center lg:flex-row lg:justify-evenly'>
                 <div className='flex items-center'>
-                <h1 className='text-3xl font-extrabold text-blue-950' >
+                <h1 className='text-2xl sm:text-3xl font-extrabold text-blue-950' >
                 MindCare
             </h1>
                 </div>
                 <div>
                     <ul className='text-center lg:text-left py-5 space-y-3 text-slate-600 font-bold'>
-                        <li>
-                            <a href="">Home</a>
-                        </li>
-                        <li>
-                            <a href="">Appionments</a>
-                        </li>
-                        <li>
-                            <a href="">Library</a>
-                        </li>
-                        <li>
-                            <a href="">Complaint</a>
-                        </li>
-                        <li>
-                            <a href="">Feedback</a>
-                        </li>
+                        {
+                            [
+                                { name: "Home", path: "/" },
+                                { name: "Find a Therapist", path: "/therapist" },
+                                { name: "Appointments", path: "/Appointment" },
+                                { name: "Library", path: "/Library" },
+                                { name: "Complaint & Feedback", path: "/Feedback" },
+                              ].map(({name,path})=>(
+                                <li key={path}>
+                                <Link
+                                to={path}
+                                >
+                                {name}
+                                </Link>
+                            </li>
+                              )
+                               
+                              )
+                        }
                     </ul>
                 </div>
                 <div>

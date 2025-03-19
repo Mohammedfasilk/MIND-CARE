@@ -9,7 +9,7 @@ function LibraryCard() {
         <div className='bg-[#ffff]'>
         <div className='p-3 text-center'>
             <h1 className='text-xl font-bold py-2'>
-                Card Title
+                Article Title
             </h1>
             <p className='max-w-[300px] max-h-[75px] overflow-hidden'>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere ratione optio reiciendis cupiditate perferendis cum! Sunt, id consequuntur sequi voluptatum dignissimos alias ut officiis, ex soluta cum pariatur iusto vero.

@@ -1,25 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function TherapistCard() {
+function TherapistCard(props) {
   return (
-    <div className='flex items-center p-3 w-[70%] rounded-xl shadow-2xl shadow-neutral-400 mt-8 bg-white'>
+    <div className='flex flex-col lg:flex-row items-center justify-center p-3 w-full sm:w-[90%] rounded-xl shadow-2xl shadow-neutral-400 mt-8 bg-white'>
+        <div className='sm:flex  w-full'>
         <div>
-            <img className='h-[120px] w-[100px]' src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="profile" />
+            <img className='h-[100px] w-[100px] sm:h-[120px] sm:w-[130px] rounded border border-neutral-500' src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" alt="profile" />
         </div>
-        <div className='px-3 w-[60%]'>
+        <div className='px-3 h-[120px] overflow-hidden w-full'>
             <h1 className='font-bold text-xl'>
-                Name
+                {props.obj.name}
             </h1>
-            <p className='text-sm font-thin italic'>Location</p>
-            <p>Licenced at</p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, a? Corrupti dolores modi ipsa quis dolor voluptatem iste enim quo earum cum esse possimus rem ea perferendis, natus at quas?
-            </p>
+            <p className='text-sm font-thin italic'>Location {props.obj.location}</p>
+            <p>Licenced at {props.obj.License}</p>
         </div>
-        <div className='px-10'>
-        <Link to='/booking' className='bg-[#17A39C] p-3 px-5 rounded text-white font-semibold shadow-md shadow-black/50'>Book an Appointment</Link>
         </div>
+        <div className='lg:w-[350px] flex justify-center lg:justify-end lg:px-5 pt-5 lg:pt-0'>
+        <Link to='/user/booking' className='bg-[#17A39C] text-sm sm:text-base p-3 px-5 rounded text-white font-semibold shadow-md shadow-black/50'>Book an Appointment</Link>
+        </div>
+        
         
     </div>
   )
