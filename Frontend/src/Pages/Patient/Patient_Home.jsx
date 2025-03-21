@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import LibraryCard from "../../Component/Patient/LibraryCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import img1_1 from '../../assets/Patient/pexels-mikhail-nilov-6894013.jpg'
 
 function Patient_Home() {
   useEffect(() => {
@@ -49,7 +50,7 @@ function Patient_Home() {
             >
               <div
                 style={{
-                  backgroundImage: `url(/src/assets/Patient/pexels-mikhail-nilov-6894013.jpg)`,
+                  backgroundImage: `url(${img1_1})`,
                 }}
                 className="xl:min-w-[350px] bg-cover rounded-xl bg-center row-span-2"
               ></div>
