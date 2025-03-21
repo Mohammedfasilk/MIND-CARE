@@ -24,7 +24,7 @@ function Patient_Home() {
             initial={{ opacity: 0.6, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             className="flex flex-col items-center space-y-8 justify-center p-5 h-full"
           >
             <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-center">
@@ -52,7 +52,7 @@ function Patient_Home() {
               initial={{ opacity: 0.6, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true }}
               className="grid grid-cols-2 grid-rows-2 px-5 py-5 lg:py-28 gap-3 min-h-[25rem] lg:h-screen w-full"
             >
               <div
@@ -93,7 +93,7 @@ function Patient_Home() {
           initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 gap-x-40 py-20"
         >
           <div className="bg-[#E4FADE] rounded text-center">
@@ -127,7 +127,7 @@ function Patient_Home() {
             initial={{ opacity: 1, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             style={{
               backgroundImage:
                 `url(${img2_1})`,
@@ -138,7 +138,7 @@ function Patient_Home() {
             initial={{ opacity: 1, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             style={{
               backgroundImage:
                 `url(${img2_2})`,
@@ -149,7 +149,7 @@ function Patient_Home() {
             initial={{ opacity: 1, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             style={{
               backgroundImage:
                 `url(${img2_3})`,
@@ -160,7 +160,7 @@ function Patient_Home() {
             initial={{ opacity: 1, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             style={{
               backgroundImage:
                 `url(${img2_4})`,
@@ -202,7 +202,7 @@ function Patient_Home() {
             initial={{ opacity: 1, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             className="flex justify-center w-fit p-5"
           >
             <h1 className="text-lg sm:text-4xl font-bold">Why Choose Us?</h1>
@@ -211,7 +211,7 @@ function Patient_Home() {
             initial={{ opacity: 1, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             className="flex justify-center lg:w-[50%] p-5"
           >
             <p className="font-thin text-center text-base md:text-lg">
