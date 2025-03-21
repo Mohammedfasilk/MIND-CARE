@@ -18,7 +18,7 @@ function Patient_Home() {
   const navigate = useNavigate();
   return (
     <>
-      <main>
+      <main className="overflow-hidden">
         <section className="min-h-screen xl:flex justify-evenly items-center w-full pt-20 xl:pt-8 bg-[#E9E9E9]">
           <motion.div
             initial={{ opacity: 0.6, x: -60 }}
@@ -76,7 +76,6 @@ function Patient_Home() {
             </motion.div>
           </div>
         </section>
-      </main>
       <section className="py-10 flex flex-col items-center">
         <div className="text-center w-[80%] space-y-5">
           <h1 className="text-lg sm:text-4xl font-bold">
@@ -226,6 +225,7 @@ function Patient_Home() {
           </motion.div>
         </div>
       </section>
+      </main>
     </>
   );
 }
