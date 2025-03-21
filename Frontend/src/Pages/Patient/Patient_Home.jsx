@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import LibraryCard from "../../Component/Patient/LibraryCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import consult_img from '../../assets/Common/Gemini_Generated_Image_8axt8axt8axt8axt.jpeg'
+
 function Patient_Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -134,7 +134,7 @@ function Patient_Home() {
             viewport={{ once: true, amount: 0.1 }}
             style={{
               backgroundImage:
-                `url(${consult_img})`,
+                "url(/src/assets/Patient/pexels-karolina-grabowska-5979728.jpg)",
             }}
             className=" bg-cover bg-center rounded-xl"
           ></motion.div>
