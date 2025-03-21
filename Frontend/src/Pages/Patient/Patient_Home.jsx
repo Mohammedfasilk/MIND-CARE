@@ -3,6 +3,8 @@ import LibraryCard from "../../Component/Patient/LibraryCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import img1_1 from '../../assets/Patient/pexels-mikhail-nilov-6894013.jpg'
+import img1_2 from '../../assets/Patient/pexels-olly-948875.jpg'
+import img1_3 from '../../assets/Patient/pexels-fauxels-3228845.jpg'
 
 function Patient_Home() {
   useEffect(() => {
@@ -56,13 +58,13 @@ function Patient_Home() {
               ></div>
               <div
                 style={{
-                  backgroundImage: `url(/src/assets/Patient/pexels-olly-948875.jpg)`,
+                  backgroundImage: `url(${img1_2})`,
                 }}
                 className="min-w-[100px] bg-cover rounded-xl bg-center"
               ></div>
               <div
                 style={{
-                  backgroundImage: `url(/src/assets/Patient/pexels-fauxels-3228845.jpg)`,
+                  backgroundImage: `url(${img1_3})`,
                 }}
                 className="min-w-[100px]  bg-cover rounded-xl bg-center"
               ></div>
