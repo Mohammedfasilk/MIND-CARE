@@ -6,6 +6,11 @@ import img1_1 from '../../assets/Patient/pexels-mikhail-nilov-6894013.jpg'
 import img1_2 from '../../assets/Patient/pexels-olly-948875.jpg'
 import img1_3 from '../../assets/Patient/pexels-fauxels-3228845.jpg'
 
+import img2_1 from '../../assets/Patient/pexels-liza-summer-6383267.jpg'
+import img2_2 from '../../assets/Patient/pexels-karolina-grabowska-5979728.jpg'
+import img2_3 from '../../assets/Patient/pexels-sofia-alejandra-946049-3007355.jpg'
+import img2_4 from '../../assets/Patient/pexels-olly-948875.jpg'
+
 function Patient_Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -126,7 +131,7 @@ function Patient_Home() {
             viewport={{ once: true, amount: 0.1 }}
             style={{
               backgroundImage:
-                "url(/src/assets/Patient/pexels-liza-summer-6383267.jpg)",
+                `url(${img2_1})`,
             }}
             className=" bg-cover bg-center rounded-xl  row-span-2"
           ></motion.div>
@@ -137,7 +142,7 @@ function Patient_Home() {
             viewport={{ once: true, amount: 0.1 }}
             style={{
               backgroundImage:
-                "url(/src/assets/Patient/pexels-karolina-grabowska-5979728.jpg)",
+                `url(${img2_2})`,
             }}
             className=" bg-cover bg-center rounded-xl"
           ></motion.div>
@@ -148,7 +153,7 @@ function Patient_Home() {
             viewport={{ once: true, amount: 0.1 }}
             style={{
               backgroundImage:
-                "url(/src/assets/Patient/pexels-sofia-alejandra-946049-3007355.jpg)",
+                `url(${img2_3})`,
             }}
             className=" bg-cover bg-center rounded-xl  row-span-2"
           ></motion.div>
@@ -159,7 +164,7 @@ function Patient_Home() {
             viewport={{ once: true, amount: 0.1 }}
             style={{
               backgroundImage:
-                "url(/src/assets/Patient/pexels-olly-948875.jpg)",
+                `url(${img2_4})`,
             }}
             className=" bg-cover bg-center rounded-xl "
           ></motion.div>
