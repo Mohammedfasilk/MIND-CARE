@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import LibraryCard from "../../Component/Patient/LibraryCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import img2_1 from '/src/assets/Patient/pexels-mikhail-nilov-6894013.jpg'
+import img2_1 from '../../assets/Patient/pexels-mikhail-nilov-6894013.jpg'
 
 function Patient_Home() {
   useEffect(() => {
