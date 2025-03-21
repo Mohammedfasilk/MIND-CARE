@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom'
-import Patient from '../../Route/Patient';
 
 function SignUp() {
     const navigate = useNavigate()
@@ -29,9 +28,9 @@ function SignUp() {
                 Already have an account? <Link className='text-blue-600 underline' to=''>Log In</Link>
             </p>
         </div>
-        <section className='flex justify-center w-full'>
+        <section className=' lg:flex justify-center w-full'>
             <div className='p-8'>
-            <form onSubmit={handleSubmit(onSubmit)} className="bg-white w-full p-10 border-r-2 border-black">
+            <form onSubmit={handleSubmit(onSubmit)} className="bg-white w-full py-10 sm:p-5 lg:p-10 border-b-2 lg:border-b-0 lg:border-r-2 border-black">
         
 
         <div className="grid sm:grid-cols-2 gap-5">
@@ -196,9 +195,9 @@ function SignUp() {
       </form>
             </div>
 
-            <div className='flex items-center'>
-                <h1 className='text-2xl'>
-                    Are you a Therapist SignUP here
+            <div className='flex items-center justify-center'>
+                <h1 className=' text-base sm:text-xl lg:text-2xl pb-10'>
+                    Are you a Therapist Signup here
                 </h1>
             </div>
         </section>

@@ -4,6 +4,7 @@ import Home from '../Pages/Common/Home'
 import Navbar from '../Component/Common/Navbar'
 import SignUp from '../Pages/Common/SignUp'
 import Patient from './Patient'
+import Footer from '../Component/Common/Footer'
 
 function Common() {
   return (
@@ -14,6 +15,7 @@ function Common() {
       <Route path='/' element={<Home/>}/>
       <Route path='/signup' element={<SignUp/>}/>
     </Routes>
+    <Footer/>
    
    </>
   )

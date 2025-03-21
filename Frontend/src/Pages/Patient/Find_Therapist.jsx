@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import TherapistCard from "../../Component/Patient/TherapistCard";
 
+
 function Find_Therapist() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
     const therapists = [{name:'Therapist 1',location:'vailathur',License:'Mental health counsiler'},
-      {name:'Therapist 2',location:'tirur',License:'Mental health counsiler'}]
+      {name:'Therapist 2',location:'tirur',License:'Mental health counsiler'},
+      {name:'Therapist 3',location:'tanur',License:'Mental health counsiler'}]
     
     
     const [value,setValue] = useState(false)

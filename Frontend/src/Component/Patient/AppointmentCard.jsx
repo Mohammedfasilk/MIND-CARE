@@ -1,8 +1,13 @@
 import React from 'react'
-
+import {motion} from 'framer-motion'
 function AppointmentCard(props) {
   return (
-    <div className='mt-10 w-full p-5 flex flex-col sm:flex-row justify-between rounded-xl shadow-xl border border-neutral-100 bg-white'>
+    <motion.div
+    initial={{ opacity: 1, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true, amount: 0.3 }}
+    className='mt-10 w-full p-5 flex flex-col sm:flex-row justify-between rounded-xl shadow-xl border border-neutral-100 bg-white'>
                    <div>
                    <h1 className='text-xl font-semibold'>
                         Mohammed Fasil K
@@ -29,7 +34,7 @@ function AppointmentCard(props) {
                     {props.isSheduled && <button className='border-2 border-red-500 rounded px-5 font-bold text-red-500'>Join</button>}
                    </div>
                    </div>
-                </div>
+                </motion.div>
   )
 }
 

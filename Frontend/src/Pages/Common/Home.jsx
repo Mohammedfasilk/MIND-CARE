@@ -2,6 +2,9 @@ import React from 'react'
 import Home_img from '../../assets/Common/496154d3aa8d8360596bd8e1cc84a74c-senior-woman-online-therapy-tablet.jpg'
 import consult_img from '../../assets/Common/Gemini_Generated_Image_8axt8axt8axt8axt.jpeg'
 import SessionCard from '../../Component/Common/SessionCard'
+import {motion} from 'framer-motion'
+
+
 function Home() {
   return (
     <main>
@@ -41,7 +44,7 @@ function Home() {
                         <p className='w-3/4'>
                         Highly qualified team of some of the best names in psychology who deliver improved well-being to you. Carefully vetted through a rigorous selection process. Trained and experienced in all psychotherapy techniques.
                         </p>
-                        <div className='grid  sm:grid-cols-3 py-8 gap-10'>
+                        <div className='grid  sm:grid-cols-3 py-8 gap-10'>  
                             <SessionCard title={'Video Session'} icon={'bi bi-webcam'} />
                             <SessionCard title={'Audio Session'} icon={'bi bi-mic'} />
                             <SessionCard title={'Chat Session'} icon={'bi bi-chat-left-dots'}/>

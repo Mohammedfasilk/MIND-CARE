@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Patient_Navbar() {
   const location = useLocation();
+  const navigate =useNavigate();
   const [toggle, setToggle] = useState(false);
 
   const MenuToggle = () => {
@@ -16,7 +17,7 @@ function Patient_Navbar() {
   return (
     <nav className="flex justify-between xl:items-center xl:space-x-20 w-full xl:px-16 py-4 border-b fixed bg-white z-10">
       <div className="flex px-5 items-center">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-blue-950">
+        <h1 onClick={()=>navigate('/')} className="text-2xl sm:text-3xl font-extrabold text-blue-950 cursor-pointer">
           MindCare
         </h1>
       </div>
