@@ -24,11 +24,11 @@ function Patient_Navbar() {
 
       
       <div
-        className={`xl:flex absolute xl:static xl:max-h-full transition-all duration-300 ease-in-out mt-10 xl:mt-0 right-0 items-center rounded-b-xl bg-white/95 py-2 xl:py-2 xl:border-b-0 border-neutral-200 ${
-          toggle ? "max-h-screen opacity-100" : "max-h-0 opacity-0 xl:opacity-100"
+        className={`xl:flex absolute xl:static xl:max-h-full ease-linear duration-300 mt-10 xl:mt-0 right-0 items-center rounded-b-xl bg-white/95 py-2 xl:py-2 xl:border-b-0 border-neutral-200 ${
+          toggle ? "max-h-screen" : "max-h-0 overflow-hidden"
         }`}
       >
-        <ul className="xl:flex xl:items-center xl:space-x-16 space-y-2 xl:space-y-0 text-left px-5 py-5 xl:py-0 md:px-10 text-slate-600 font-bold">
+        <ul className={`xl:flex xl:items-center xl:space-x-16 space-y-2 xl:space-y-0 text-left px-5 py-5 xl:py-0 md:px-10 text-slate-600 font-bold ease-linear duration-300 ${toggle ? 'opacity-100' :'opacity-0'}`}>
           {[
             { name: "Home", path: "/user/Dashboard" },
             { name: "Find a Therapist", path: "/user/therapist" },
