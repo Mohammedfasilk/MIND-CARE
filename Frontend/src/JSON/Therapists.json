@@ -1,0 +1,34 @@
+[
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "gender": "male",
+        "location":"Vailathur",
+        "license":"Mental Health Counselor"
+      },
+      {
+        "id": 2,
+        "name": "Emily Johnson",
+        "email": "emily.johnson@x.dummyjson.com",
+        "gender": "female",
+        "location":"Malappuram",
+        "license":"Mental Health Counselor"
+      },
+      {
+        "id": 2,
+        "name": "Sophia Brown",
+        "email": "sophiabrown@example.com",
+        "gender": "female",
+        "location":"calicut",
+        "license":"Mental Health Counselor"
+      },
+      {
+        "id": 2,
+        "name": "Alexander Jones",
+        "email": "alexjones@example.com",
+        "gender": "male",
+        "location":"Tirur",
+        "license":"Mental Health Counselor"
+      }
+]

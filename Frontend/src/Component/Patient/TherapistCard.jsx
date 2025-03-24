@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function TherapistCard({ key, obj }) {
+function TherapistCard({ obj }) {
   return (
     <motion.div
       initial={{ opacity: 1, y: 30 }}
@@ -22,7 +22,7 @@ function TherapistCard({ key, obj }) {
         <div className="px-3 h-[120px] overflow-hidden w-full">
           <h1 className="font-bold text-xl">{obj.name}</h1>
           <p className="text-sm font-thin italic">Location {obj.location}</p>
-          <p>Licenced at {obj.License}</p>
+          <p>Licenced at {obj.license}</p>
         </div>
       </div>
       <div className="lg:w-[350px] flex justify-center lg:justify-end lg:px-5 pt-5 lg:pt-0">

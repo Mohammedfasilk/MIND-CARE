@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from "react";
 import TherapistCard from "../../Component/Patient/TherapistCard";
+import TherapistData from '../../JSON/Therapists.json'
 
 
 function Find_Therapist() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-    const therapists = [{name:'Therapist 1',location:'vailathur',License:'Mental health counsiler'},
-      {name:'Therapist 2',location:'tirur',License:'Mental health counsiler'},
-      {name:'Therapist 3',location:'tanur',License:'Mental health counsiler'}]
     
-    
+    const [therapist,SetTherapist] = useState(TherapistData)
+    const [filteredList,SetFilteredList] = useState(TherapistData)
     const [value,setValue] = useState(false)
+    
+
+    const sortBygender = (value)=>{
+      
+      if(value === 'All'){
+        SetFilteredList(TherapistData)
+        
+        return;
+      }
+      const sortedList =  therapist.filter((item)=> item.gender === value.toLowerCase());
+      SetFilteredList(sortedList);
+
+    }
+    
   return (
     <main className="flex pt-[70px] h-screen" onMouseEnter={()=>setValue(true)} onMouseLeave={()=>setValue(false)}>
       <section className="px-20 w-1/3 hidden xl:flex flex-col justify-center border-r-2">
@@ -49,20 +62,24 @@ function Find_Therapist() {
           </button>
         </div>
         <div className=" flex justify-center sm:justify-between p-3 bg-[#17A39C]">
-          <div className="sm:flex justify-evenly w-[50%] hidden ">
-            <a className="cursor-pointer bg-white px-5 py-1 rounded">Male</a>
-            <a className="cursor-pointer bg-white px-5 py-1 rounded">Female</a>
-            <a className="cursor-pointer bg-white px-5 py-1 rounded">
-              Near Location
-            </a>
+          <div className="flex justify-evenly w-full sm:w-[50%]">
+            <button className="cursor-pointer bg-white px-5 py-1 rounded"
+            onClick={(e)=>sortBygender(e.target.innerText)
+            }>Male</button>
+            <button className="cursor-pointer bg-white px-5 py-1 rounded"
+            onClick={(e)=>sortBygender(e.target.innerText)}>Female</button>
+           <button className="cursor-pointer bg-white px-5 py-1 rounded"
+          onClick={(e)=>sortBygender(e.target.innerText)}>
+            All
+          </button>
           </div>
-          <a className="cursor-pointer bg-white px-5 py-1 rounded">
-            All Filters
-          </a>
         </div>
         <div className="flex flex-col  items-center min-h-screen max-h-fit w-full px-2  sm:px-10 bg-gray-100 py-16">
           {
-            therapists.map((obj,index)=> <TherapistCard key={index} obj={obj} />)
+            (filteredList.length > 0) ?
+            filteredList.map((obj,index)=> <TherapistCard key={index} obj={obj} />)
+            :
+            <p>No Result Found</p>
 
           }
         </div>
