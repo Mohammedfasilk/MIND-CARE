@@ -28,7 +28,7 @@ function Patient_Navbar() {
           toggle ? "max-h-screen" : "max-h-0 overflow-hidden"
         }`}
       >
-        <ul className={`xl:flex xl:items-center xl:space-x-16 space-y-2 xl:space-y-0 text-left px-5 py-5 xl:py-0 md:px-10 text-slate-600 font-bold ease-linear duration-300 ${toggle ? 'opacity-100' :'opacity-0'}`}>
+        <ul className={`xl:flex xl:items-center xl:space-x-16 space-y-2 xl:space-y-0 text-left px-5 py-5 xl:py-0 md:px-10 text-slate-600 font-bold ease-linear duration-300 ${toggle ? 'opacity-100' :'opacity-0 xl:opacity-100'}`}>
           {[
             { name: "Home", path: "/user/Dashboard" },
             { name: "Find a Therapist", path: "/user/therapist" },

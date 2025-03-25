@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import TherapistCard from "../../Component/Patient/TherapistCard";
 import TherapistData from '../../JSON/Therapists.json'
-
+import img_1 from '/src/assets/Patient/pexels-david-garrison-1128051-2128807.jpg'
+import img_2 from '/src/assets/Patient/pexels-heitorverdifotos-2169434.jpg'
+import img_3 from '/src/assets/Patient/pexels-italo-melo-881954-2379005.jpg'
 
 function Find_Therapist() {
   useEffect(() => {
@@ -32,15 +34,15 @@ function Find_Therapist() {
           <div
             className="w-28 h-28 rounded-full border-2 border-stone-200 bg-cover  bg-center"
 
-            style={{backgroundImage:`url("/src/assets/Patient/pexels-david-garrison-1128051-2128807.jpg")`}}
+            style={{backgroundImage:`url(${img_1})`}}
           ></div>
           <div
             className={`w-28 h-28 rounded-full border-2 border-stone-200 bg-cover bg-center absolute transition-all duration-500 ease-in-out ${value ? 'ml-20' : 'ml-0'}`}
-            style={{backgroundImage:`url("/src/assets/Patient/pexels-heitorverdifotos-2169434.jpg")`}}
+            style={{backgroundImage:`url(${img_2})`}}
           ></div>
           <div
             className={`w-28 h-28 rounded-full border-2 border-stone-200 bg-cover bg-center absolute transition-all duration-500 ease-in-out ${value ? 'ml-40' : 'ml-0'}`}
-            style={{backgroundImage:`url("/src/assets/Patient/pexels-italo-melo-881954-2379005.jpg")`}}
+            style={{backgroundImage:`url(${img_3})`}}
           ></div>
         </div>
         <div className="w-[20rem] space-y-3 py-5 text-lg font-sans">
@@ -63,15 +65,18 @@ function Find_Therapist() {
         </div>
         <div className=" flex justify-center sm:justify-between p-3 bg-[#17A39C]">
           <div className="flex justify-evenly w-full sm:w-[50%]">
-            <button className="cursor-pointer bg-white px-5 py-1 rounded"
-            onClick={(e)=>sortBygender(e.target.innerText)
-            }>Male</button>
-            <button className="cursor-pointer bg-white px-5 py-1 rounded"
-            onClick={(e)=>sortBygender(e.target.innerText)}>Female</button>
+
            <button className="cursor-pointer bg-white px-5 py-1 rounded"
           onClick={(e)=>sortBygender(e.target.innerText)}>
             All
           </button>
+
+          <button className="cursor-pointer bg-white px-5 py-1 rounded"
+            onClick={(e)=>sortBygender(e.target.innerText)
+            }>Male</button>
+
+            <button className="cursor-pointer bg-white px-5 py-1 rounded"
+            onClick={(e)=>sortBygender(e.target.innerText)}>Female</button>
           </div>
         </div>
         <div className="flex flex-col  items-center min-h-screen max-h-fit w-full px-2  sm:px-10 bg-gray-100 py-16">

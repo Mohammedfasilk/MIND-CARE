@@ -43,11 +43,8 @@ function PatientBooking() {
                 )}
                 </div>
             </div>  
-            <div className='flex py-5 flex-col items-center space-y-5'>
+            <div className='flex py-10 flex-col items-center space-y-5'>
                 <BookingTime/>
-                <BookingTime/>
-                <BookingTime/>
-
             </div>
             </div>
         </section>
