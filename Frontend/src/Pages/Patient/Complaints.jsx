@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Button from "../../Component/Common/Button";
+import useScrolltoTop from "../../Custom Hooks/useScrolltoTop";
 
 function Complaints() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useScrolltoTop();
 
   const [feedBack, setFeedback] = useState("");
   const [complaint, setComplaint] = useState("");
@@ -36,12 +36,7 @@ function Complaints() {
             name="Feedback"
           ></textarea>
           <div className="flex justify-center p-5">
-            <a
-              onClick={handlefeedback}
-              className="bg-[#17A39C] p-3 px-5 rounded text-white font-semibold shadow-md shadow-black/50 cursor-pointer"
-            >
-              Send Feedback
-            </a>
+            <Button handleClick={handlefeedback}>Send Feedback</Button>
           </div>
         </div>
       </section>
@@ -60,12 +55,7 @@ function Complaints() {
             name="Complaint"
           ></textarea>
           <div className="flex justify-center p-5">
-            <a
-              onClick={handleComplaint}
-              className="bg-[#17A39C] p-3 px-5 rounded text-white font-semibold shadow-md shadow-black/50 cursor-pointer"
-            >
-              Send Complaint
-            </a>
+            <Button handleClick={handleComplaint}>Send Complaint</Button>
           </div>
         </div>
       </section>

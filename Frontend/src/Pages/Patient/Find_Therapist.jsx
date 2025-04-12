@@ -4,11 +4,10 @@ import TherapistData from '../../JSON/Therapists.json'
 import img_1 from '/src/assets/Patient/pexels-david-garrison-1128051-2128807.jpg'
 import img_2 from '/src/assets/Patient/pexels-heitorverdifotos-2169434.jpg'
 import img_3 from '/src/assets/Patient/pexels-italo-melo-881954-2379005.jpg'
+import useScrolltoTop from "../../Custom Hooks/useScrolltoTop";
 
 function Find_Therapist() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useScrolltoTop();
     
     const [therapist,SetTherapist] = useState(TherapistData)
     const [filteredList,SetFilteredList] = useState(TherapistData)

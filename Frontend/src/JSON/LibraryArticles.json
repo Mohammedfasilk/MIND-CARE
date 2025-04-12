@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "thumbnailUrl": "https://picsum.photos/200?random=1"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "thumbnailUrl": "https://picsum.photos/200?random=2"
+    },
+    {
+      "id": 3,
+      "title": "To Kill a Mockingbird",
+      "thumbnailUrl": "https://picsum.photos/200?random=3"
+    },
+    {
+      "id": 4,
+      "title": "The Hobbit",
+      "thumbnailUrl": "https://picsum.photos/200?random=4"
+    },
+    {
+      "id": 5,
+      "title": "Pride and Prejudice",
+      "thumbnailUrl": "https://picsum.photos/200?random=5"
+    }
+  ]
