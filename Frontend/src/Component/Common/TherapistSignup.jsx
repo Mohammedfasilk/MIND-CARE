@@ -183,7 +183,7 @@ function TherapistSignup({handleUser}) {
 
         {/* Submit Button */}
         <div className="text-center mt-5">
-          <button onClick={()=>navigate('/user/Dashboard')} type="submit" className="bg-[#17A39C] text-white px-5 py-2 rounded-md hover:bg-[#17B89D]">
+          <button  type="submit" className="bg-[#17A39C] text-white px-5 py-2 rounded-md hover:bg-[#17B89D]">
             Sign Up
           </button>
         </div>
